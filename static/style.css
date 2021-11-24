@@ -8,7 +8,10 @@ body {
     width: 100x;
 }
 
-#map {
-    height: 500px;
-    width: 500px;
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
 }
