@@ -8,8 +8,9 @@ var jsonData = JSON.parse(request.responseText);
 
 function printList(jsonData){
     var placeString = "";
-    for(let i = 0; i < 2; i++){
-        var placeString = placeString + jsonData.results[i].name + "\n";
+    var numResults = jsonData.results.length;
+    for(let i = 0; i < numResults; i++){
+        var placeString = placeString + jsonData.results[i].name + ", ";
     }
     document.getElementById("name").innerHTML = placeString;
 }
