@@ -22,7 +22,11 @@ headers = {
 
 response = requests.request("GET", url, headers=headers)
 
+pprint.pprint(response.text)
+
 with open('hotSpots.json', 'w') as file: 
     file.truncate(0)        # Clears file before writing to it
     file.write(response.text)
+
+
     
