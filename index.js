@@ -1,8 +1,10 @@
 const fileName = "hotSpots.json";
 
 var request = new XMLHttpRequest();
-request.open("GET","hotSpots.json", false);
+request.open("GET", fileName, false);
 request.send(null);
 
-var JSON_file = JSON.parse(request.responseText);
-document.getElementById("test").innerHTML = JSON_file;
+var jsonData = JSON.parse(request.responseText);
+
+document.getElementById("test").innerHTML = jsonData.results[0].fsq_id;
+
