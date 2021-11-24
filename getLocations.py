@@ -25,4 +25,4 @@ response = requests.request("GET", url, headers=headers)
 with open('hotSpots.json', 'w') as file: 
     file.truncate(0)        # Clears file before writing to it
     file.write(response.text)
-
+    
