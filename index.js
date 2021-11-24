@@ -5,4 +5,11 @@ request.open("GET", fileName, false);
 request.send(null);
 
 var jsonData = JSON.parse(request.responseText);
-document.getElementById("name").innerHTML = jsonData.results[0].name
+
+function printList(jsonData){
+    var placeString = "";
+    for(let i = 0; i < 2; i++){
+        var placeString = placeString + jsonData.results[i].name + "\n";
+    }
+    document.getElementById("name").innerHTML = placeString;
+}
