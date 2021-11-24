@@ -1,16 +1,16 @@
 const fileName = "hotSpots.json";
 
-var request = new XMLHttpRequest();
-request.open("GET", fileName, false);
-request.send(null);
+var req = new XMLHttpRequest();
+req.open("GET", fileName, false);
+req.send(null);
 
-var jsonData = JSON.parse(request.responseText);
+var jsonFile = JSON.parse(req.responseText);
 
-function printList(jsonData){
-    var placeString = "";
-    var numResults = jsonData.results.length;
+// Prints list of locations 
+function printList(jsonFile){
+    var numResults = jsonFile.results.length;
+    var listItem = document.getElementById("placeList");
     for(let i = 0; i < numResults; i++){
-        var placeString = placeString + jsonData.results[i].name + ", ";
+        listItem.innerHTML += "<li>" + jsonFile.results[i].name + "</li>";
     }
-    document.getElementById("name").innerHTML = placeString;
 }
