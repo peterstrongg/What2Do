@@ -4,26 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/style.css">
     <title>What2Do</title>
 </head>
 <body>
-    <h1>What2Do</h1>
-    <div id="userInput"></div>
-
-    <form action="#" method="post">
-        <p1>Zip Code</p1>
-        <p><input id="input" name="zip"></p>
-        <select id="select" name="selectCategory">
-            <option disabled selected value>Select an option</option>
-            <option id="cafe">Cafe</option>
-            <option id="arcade">Arcade</option>
-            <option id="park">Park</option>
-        </select>
-        <p><input type="submit" value="submit"></p>
-    </form>
-        
+    <div class="jumbotron vertical-center" id="jtron"></div>
+        <h1 class="d-flex justify-content-center">What2Do</h1>   
+        <div class="d-flex justify-content-center" id="userInput">
+        <form action="#" method="post">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <p class="d-flex justify-content-center"><input id="input" name="zip" placeholder="Enter ZIP Code"></p>
+                    </div>
+                    <div class="col-xs-6">
+                        <select id="select" name="selectCategory">
+                            <option disabled selected value>Select an option</option>
+                            <option id="cafe">Cafe</option>
+                            <option id="arcade">Arcade</option>
+                            <option id="park">Park</option>
+                        </select>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <p class="d-flex justify-content-center"><input type="submit" value="submit"></p>
+    </form>       
     </div>
+
     <div class="places">
         <p1 id="name"></p1>
         <ul id="placeList">
