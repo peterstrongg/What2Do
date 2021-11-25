@@ -1,10 +1,23 @@
+/*
+Color Palette:
+#D1BCE3
+#C49BBB
+#A1867F
+#585481
+#19297C
+*/
+
 body {
-    background-color: black;
+    background-color: #585481;
     color: white;
+    
+    font-family: calibri;
+    font-weight: 100;
+    
 }
 
 #input {
-    height: 15px;
+    height: 23px;
     width: 100x;
 }
 
@@ -14,4 +27,8 @@ a:link {
 
 a:hover {
     text-decoration: none;
+}
+
+#jtron {
+    background-color: #585481;
 }
