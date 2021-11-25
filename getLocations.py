@@ -13,7 +13,7 @@ long = str(query["longitude"])
 
 llString = str(lat) + '%2C' + str(long)
 radius = '10000'
-category = 'cafe'
+category = str(sys.argv[2])
 
 url = "https://api.foursquare.com/v3/places/search?query="+category+"&ll="+llString+"&radius="+radius
 
